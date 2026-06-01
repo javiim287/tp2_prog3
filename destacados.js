@@ -1,0 +1,10 @@
+const tarjetas = document.querySelectorAll('.tarjeta');
+const contador = document.getElementById('contador-seleccionadas');
+
+tarjetas.forEach(tarjeta => {
+    tarjeta.addEventListener('click', () => {
+        tarjeta.classList.toggle('seleccionada');
+        const seleccionadas = document.querySelectorAll('.tarjeta.seleccionada').length;
+        contador.textContent = seleccionadas;
+    });
+});
